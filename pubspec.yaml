@@ -1,0 +1,21 @@
+name: fly_splash_module
+description: A new Flutter module project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.5
+  fly_ui:
+    git: https://github.com/niypoo/fly_ui.git
+  loading_service:
+    git: https://github.com/niypoo/loading_service.git
+    
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
