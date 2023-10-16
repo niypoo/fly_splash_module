@@ -8,6 +8,6 @@ class LoadingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: SpinnerHelper.verticalTextSpinner(size: 200));
+    return Center(child: SpinnerHelper.verticalTextSpinner(size: 120));
   }
 }
