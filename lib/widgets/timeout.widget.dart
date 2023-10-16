@@ -15,8 +15,8 @@ class Timeout extends StatelessWidget {
         children: [
           const FlyImage(
             url: 'assets/images/characters/pain.svg',
-            height: 120,
-            width: 120,
+            height: 150,
+            width: 150,
           ),
           Text('Something went wrong'.tr),
         ],

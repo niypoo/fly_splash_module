@@ -7,7 +7,7 @@ class SplashController extends GetxController {
   // define timeout
   late Future timeout;
   // timeout duration in //minutes
-  late int timeoutDuration = 2;
+  late int timeoutDuration = 1;
   // notify issue found
   RxBool issued = RxBool(false);
 
