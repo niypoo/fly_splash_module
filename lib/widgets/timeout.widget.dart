@@ -13,7 +13,7 @@ class Timeout extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         const FlyImage(
-          url: 'assets/images/pain.svg',
+          url: 'assets/icon/icon.svg',
           height: 150,
           width: 150,
         ),
