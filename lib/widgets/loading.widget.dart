@@ -24,6 +24,7 @@ class LoadingWidget extends StatelessWidget {
             'Loading...'.tr,
             style: Get.textTheme.titleSmall!.copyWith(
               fontWeight: FontWeight.bold,
+              fontSize: 12.sp,
               color: Get.theme.primaryColor,
             ),
           ),
