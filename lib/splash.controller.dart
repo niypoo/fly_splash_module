@@ -19,7 +19,7 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    SplashLoadingService.to.loadingJobs().then(
+    SplashLoadingService.to.splashHandler.run().then(
       (_) {
         completed.value = true;
       },

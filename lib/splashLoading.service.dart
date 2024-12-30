@@ -1,3 +1,4 @@
+import 'package:fly_splash_module/interfaces/splashLoading.handler.dart';
 import 'package:get/get.dart';
 
 class SplashLoadingService extends GetxService {
@@ -5,10 +6,10 @@ class SplashLoadingService extends GetxService {
   static SplashLoadingService get to => Get.find();
 
   // await jobs
-  final Future<void> Function() loadingJobs;
+  final SplashLoadingHandler splashHandler;
   
   // constructor
-  SplashLoadingService({required this.loadingJobs});
+  SplashLoadingService({required this.splashHandler});
 
   Future<SplashLoadingService> init() async {
     return this;
