@@ -23,14 +23,14 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     handler.onInit().then(
-      (_) {
+      (_) async {
         completed.value = true;
-        handler.onReady();
+        await handler.onReady();
       },
     ).catchError(
-      (_) {
+      (_) async {
         errored.value = true;
-        handler.onError();
+        await handler.onError();
       },
     );
   }
