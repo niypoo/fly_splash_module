@@ -1,3 +1,4 @@
+import 'package:fly_splash_module/interfaces/splashLoading.handler.dart';
 import 'package:fly_splash_module/splashLoading.service.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +12,8 @@ class SplashController extends GetxController {
   // loading Errored
   final RxBool errored = false.obs;
 
+  final SplashLoadingHandler handler = SplashLoadingService.to.splashHandler;
+
   @override
   void onInit() {
     super.onInit();
@@ -19,13 +22,15 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    SplashLoadingService.to.splashHandler.run().then(
+    handler.onInit().then(
       (_) {
         completed.value = true;
+        handler.onReady();
       },
     ).catchError(
       (_) {
         errored.value = true;
+        handler.onError();
       },
     );
   }
