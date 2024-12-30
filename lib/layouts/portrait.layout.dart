@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:fly_splash_module/splash.controller.dart';
+import 'package:fly_splash_module/splash.service.dart';
 import 'package:fly_splash_module/widgets/dedication.widget.dart';
 import 'package:fly_splash_module/widgets/loading.widget.dart';
 import 'package:fly_splash_module/widgets/timeout.widget.dart';
@@ -16,7 +17,7 @@ class PortraitLayout extends GetView<SplashController> {
       children: [
         const Spacer(),
         Obx(
-          () => controller.issued.isFalse
+          () => SplashService.to.errored.isFalse
               ? const LoadingWidget()
               : const Timeout(),
         ),
