@@ -12,7 +12,7 @@ class SplashController extends GetxController {
   // loading Errored
   final RxBool errored = false.obs;
 
-  final SplashLoadingHandler handler = SplashLoadingService.to.splashHandler;
+  final SplashLoadingHandler handler = SplashLoadingService.to.handler;
 
   @override
   void onInit() {

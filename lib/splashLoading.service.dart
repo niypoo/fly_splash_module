@@ -6,10 +6,10 @@ class SplashLoadingService extends GetxService {
   static SplashLoadingService get to => Get.find();
 
   // await jobs
-  final SplashLoadingHandler splashHandler;
+  final SplashLoadingHandler handler;
   
   // constructor
-  SplashLoadingService({required this.splashHandler});
+  SplashLoadingService({required this.handler});
 
   Future<SplashLoadingService> init() async {
     return this;
