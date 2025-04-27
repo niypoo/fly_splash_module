@@ -18,15 +18,15 @@ class PortraitLayout extends GetView<SplashController> {
         const Spacer(),
         Obx(
           () {
-            if (controller.errored.isFalse) {
+            if (controller.errored.isTrue) {
               return const Timeout();
             }
-            
+
             if (controller.completed.isFalse) {
               return const LoadingWidget();
+            } else {
+              return const CompletedWidget();
             }
-
-            return const CompletedWidget();
           },
         ),
         const Spacer(),

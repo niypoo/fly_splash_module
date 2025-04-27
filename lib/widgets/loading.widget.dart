@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
 import 'package:loading_service/helpers/spinner.helper.dart';
-import 'package:patata_responsive/patata_responsive.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({

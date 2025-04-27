@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
 import 'package:loading_service/helpers/spinner.helper.dart';
-import 'package:patata_responsive/patata_responsive.dart';
 
 class CompletedWidget extends StatelessWidget {
   const CompletedWidget({
@@ -21,7 +21,7 @@ class CompletedWidget extends StatelessWidget {
           SizedBox(height: 12.sp),
 
           Text(
-            'Completed !'.tr,
+            'Completed.'.tr,
             style: Get.textTheme.titleSmall!.copyWith(
               fontWeight: FontWeight.bold,
               fontSize: 12.sp,
