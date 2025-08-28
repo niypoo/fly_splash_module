@@ -1,3 +1,3 @@
 class SplashRoutesNames {
-  static const SPLASH = '/fly-splash';
+  static const SPLASH = '/splash';
 }
