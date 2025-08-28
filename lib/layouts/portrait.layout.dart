@@ -9,16 +9,14 @@ class PortraitLayout extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        const Spacer(),
-        Obx(
-          () => const LoadingWidget(),
-        ),
-        const Spacer(),
-        const Dedication(),
+        Spacer(),
+        LoadingWidget(),
+        Spacer(),
+        Dedication(),
       ],
     );
   }
