@@ -1,3 +1,5 @@
 abstract class SplashLoadingHandler{
-  Future<void> redirect();
+  Future<void> onInit();
+  Future<void> onReady();
+  Future<void> onError();
 }
