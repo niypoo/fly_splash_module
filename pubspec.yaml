@@ -14,8 +14,10 @@ dependencies:
   fly_ui:
     git:
       url: git@github.com:niypoo/fly_ui.git
-
-
+  loading_service:
+    git: 
+      url: git@github.com:niypoo/loading_service.git
+    
 dev_dependencies:
   flutter_test:
     sdk: flutter
