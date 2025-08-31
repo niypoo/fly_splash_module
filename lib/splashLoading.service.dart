@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:fly_splash_module/interfaces/splashLoading.handler.dart';
 import 'package:get/get.dart';
 
 class SplashLoadingService extends GetxService {
@@ -6,13 +6,10 @@ class SplashLoadingService extends GetxService {
   static SplashLoadingService get to => Get.find();
 
   // await jobs
-  final Widget spinnerWidget;
-  RxString loadingText = 'Loading...'.obs;
+  final SplashLoadingHandler handler;
   
   // constructor
-  SplashLoadingService({
-   required this.spinnerWidget,
-  });
+  SplashLoadingService({required this.handler});
 
   Future<SplashLoadingService> init() async {
     return this;

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fly_splash_module/splash.controller.dart';
-import 'package:fly_splash_module/splashLoading.service.dart';
 import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
+import 'package:loading_service/helpers/spinner.helper.dart';
 
-class LoadingWidget extends GetView<SplashController> {
+class LoadingWidget extends StatelessWidget {
   const LoadingWidget({
     Key? key,
   }) : super(key: key);
@@ -17,20 +16,18 @@ class LoadingWidget extends GetView<SplashController> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // Loading
-          SplashLoadingService.to.spinnerWidget,
-
+          SpinnerHelper.basic(size: 80.sp),
+          
           SizedBox(height: 12.sp),
 
-          Obx(() {
-            return Text(
-              SplashLoadingService.to.loadingText.value.tr,
-              style: Get.textTheme.titleSmall!.copyWith(
-                fontWeight: FontWeight.bold,
-                fontSize: 12.sp,
-                color: Get.theme.primaryColor,
-              ),
-            );
-          }),
+          Text(
+            'Loading...'.tr,
+            style: Get.textTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.bold,
+              fontSize: 12.sp,
+              color: Get.theme.primaryColor,
+            ),
+          ),
         ],
       ),
     );
