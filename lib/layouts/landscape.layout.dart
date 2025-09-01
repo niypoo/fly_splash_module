@@ -12,15 +12,15 @@ class LandscapeLayout extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
-    return FlyLandscapeView(
+    return const FlyLandscapeView(
       childA: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Obx(() => const LoadingWidget()),
+          LoadingWidget(),
         ],
       ),
-      childB: const Column(
+      childB: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
